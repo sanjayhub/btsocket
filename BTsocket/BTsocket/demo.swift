@@ -31,6 +31,8 @@ public class BTManager<U: SocketService>: NSObject {
     }
 }
 
+// tried with extension BTManager<U: SocketService> : CBPeripheralDelegate where U.T == CBL2CAPChannel { } . no luck
+
 extension BTManager : CBPeripheralDelegate {
     public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
     }
